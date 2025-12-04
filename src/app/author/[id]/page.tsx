@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getFlxblClient } from "@/lib/flxbl/config";
 
-// Revalidate every 60 seconds for ISR
-export const revalidate = 60;
+// Force dynamic rendering - no caching
+export const dynamic = "force-dynamic";
+
 import { SiteHeader } from "@/components/navigation/site-header";
 import { SiteFooter } from "@/components/navigation/site-footer";
 import { ContentGrid, type ContentCardData } from "@/components/content/content-card";

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getFlxblClient } from "@/lib/flxbl/config";
 
-// Revalidate every 60 seconds for ISR
-export const revalidate = 60;
+// Force dynamic rendering - no caching
+export const dynamic = "force-dynamic";
+
 import { searchContentByTag } from "@/lib/flxbl/queries";
 import { SiteHeader } from "@/components/navigation/site-header";
 import { SiteFooter } from "@/components/navigation/site-footer";

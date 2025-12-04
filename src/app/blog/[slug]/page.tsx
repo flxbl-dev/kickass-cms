@@ -4,8 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { getFlxblClient } from "@/lib/flxbl/config";
 
-// Revalidate every 60 seconds for ISR
-export const revalidate = 60;
+// Force dynamic rendering - no caching
+export const dynamic = "force-dynamic";
+
 import { getPublishedContentBySlugAndType, getContentBlocks } from "@/lib/flxbl/queries";
 import { generateContentMetadata, getDefaultMetadata } from "@/lib/flxbl/metadata";
 import { SiteHeader } from "@/components/navigation/site-header";
